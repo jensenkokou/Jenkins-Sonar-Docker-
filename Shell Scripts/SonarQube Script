@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Install OpenJDK 17
+sudo apt-get -y install openjdk-17-jre
+
+# Download SonarQube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.2.1.78527.zip
+
+# Install unzip
+sudo apt-get -y install unzip
+
+# Unzip SonarQube
+unzip sonarqube-10.2.1.78527.zip
+
+# Set the hostname
+sudo hostnamectl set-hostname sonarqube
+
+# Refresh
+sudo su - ubuntu
+
+# change name
+mv sonarqube-10.2.1.78527.zip sonarqube
